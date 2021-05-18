@@ -12,6 +12,6 @@ def index(request):
 
         new_photo.save()
 
-        return render(request, 'index.html', {'new_url': str(new_photo.file.url)})
+        return render(request, 'index.html', {'new_url': "http://localhost:8000" + str(new_photo.file.url)})
     else:
         return render(request, 'index.html')
